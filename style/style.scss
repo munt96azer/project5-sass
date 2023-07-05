@@ -1,0 +1,252 @@
+@import "varibles";
+@import "componinte";
+@import "mixin";
+//   global rules
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Cairo", sans-serif;
+}
+//   start header
+.header {
+  overflow: hidden;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  .logo {
+    @extend .w-f;
+    color: $seccolor;
+    padding: 15px 10px;
+    text-transform: uppercase;
+    text-shadow: -5px 1px 7px $maincolor;
+    font-weight: bold;
+  }
+}
+ul {
+  @extend .w-f;
+  display: flex;
+  list-style: none;
+  padding: 10px 10px;
+  li {
+    padding: 10px 10px;
+    a {
+      text-decoration: none;
+      color: $seccolor;
+      text-transform: uppercase;
+      font-weight: bold;
+      transition: $transtion;
+      &:hover {
+        color: $maincolor;
+      }
+    }
+  }
+}
+// landing
+.landing {
+  background-image: url(..//img/wave_background.png);
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+  .contact {
+    @extend .textCenter;
+    h2 {
+      @extend .h2;
+    }
+    span {
+      @extend .breakLine;
+    }
+    p {
+      @extend .p;
+    }
+    button {
+      @extend .buttom;
+    }
+  }
+}
+// end landing
+// start need
+.need {
+  @extend .mainPadding;
+  background-color: $maincolor;
+  text-align: center;
+  h2 {
+    @extend .h2;
+    text-transform: capitalize;
+  }
+  p {
+    @extend .p;
+  }
+  span {
+    @extend .breakLine;
+  }
+  button {
+    @extend .buttom;
+  }
+}
+// end need
+// start service
+.service {
+  @extend .mainPadding;
+  text-align: center;
+  .textService {
+    text-align: center;
+    h2 {
+      @extend .h2;
+      color: $maincolor;
+      padding-bottom: 30px;
+      text-transform: capitalize;
+    }
+    span {
+      @extend .breakLine;
+      background-color: $maincolor;
+    }
+  }
+  .boxes {
+    @extend .mainPadding;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    i {
+      font-size: 50px;
+      color: $maincolor;
+      padding-bottom: 20px;
+    }
+    h3 {
+      font-size: 30px;
+      text-transform: capitalize;
+      padding-bottom: 20px;
+      color: $seccolor;
+    }
+    p {
+      @extend .p;
+    }
+  }
+}
+// end service
+// img section
+.images {
+  background-color: $maincolor;
+  width: 100%;
+  margin: auto;
+  padding: 20px 0;
+  .imageContainer {
+    width: 90%;
+    display: flex;
+    margin: auto;
+    height: 20rem;
+    gap: 1rem;
+    > div {
+      flex: 1;
+      border-radius: 25px 10px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+      transition: all 0.6s cubic-bezier(0.25, 0.4, 0.45, 1.4);
+      &:hover {
+        flex: 5;
+      }
+    }
+  }
+}
+// end img section
+// download
+.download {
+  text-align: center;
+  background-color: $maincolor;
+  @extend .mainPadding;
+  h2 {
+    @extend .h2;
+    font-size: 25px;
+    padding: 30px;
+  }
+  button {
+    @extend .buttom;
+  }
+}
+// end download
+// touch
+.touch {
+  @extend .mainPadding;
+  text-align: center;
+  background-color: $maincolor;
+  h2 {
+    @extend .h2;
+    font-size: 20px;
+  }
+  span {
+    @extend .breakLine;
+  }
+  p {
+    @extend .p;
+  }
+  .icones {
+    display: flex;
+    justify-content: space-evenly;
+    i {
+      display: block;
+      padding: 15px 0;
+      font-size: 30px;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+    }
+    h4 {
+      color: white;
+    }
+  }
+}
+// end touch
+// media
+@media (max-width: 768px) {
+  .w-f {
+    width: 100%;
+    float: none;
+  }
+  .h2 {
+    font-size: 25px;
+  }
+  .p {
+    font-size: 15px;
+  }
+  .header {
+    text-align: center;
+    ul {
+      display: block;
+    }
+  }
+  .service {
+    .boxes {
+      display: block;
+    }
+  }
+  .images {
+    display: none;
+  }
+  .touch {
+    .icones {
+      display: block;
+      .icon1 {
+        padding-bottom: 20px;
+      }
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1025px) {
+  .service {
+    .boxes {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+@media (min-width: 769px) and (max-width: 1025px){
+  .touch {
+    .icones {
+      display: flex;
+    }
+  }
+}

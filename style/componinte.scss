@@ -1,0 +1,51 @@
+.mainPadding {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.container {
+  width: 85%;
+  margin: auto;
+}
+.w-f {
+  width: 50%;
+  float: left;
+}
+.textCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.buttom {
+  padding: 10px 20px;
+  color: white;
+  background-color: $seccolor;
+  border: none;
+  border-radius: 25px 10px;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: $transtion;
+  &:hover {
+    background-color: white;
+    color: $seccolor;
+    transform: scale(1.1);
+  }
+}
+.h2 {
+  font-size: 40px;
+  color: white;
+  text-transform: uppercase;
+}
+.breakLine {
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: $seccolor;
+  margin: 1rem auto;
+}
+.p {
+  color: $seccolor;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  padding: 20px 20px;
+}

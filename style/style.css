@@ -1,0 +1,243 @@
+.mainPadding, .touch, .download, .service .boxes, .service, .need {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.container {
+  width: 85%;
+  margin: auto;
+}
+
+.w-f, ul, .header .logo {
+  width: 50%;
+  float: left;
+}
+
+.textCenter, .landing .contact {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.buttom, .download button, .need button, .landing .contact button {
+  padding: 10px 20px;
+  color: white;
+  background-color: #091830;
+  border: none;
+  border-radius: 25px 10px;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+}
+.buttom:hover, .download button:hover, .need button:hover, .landing .contact button:hover {
+  background-color: white;
+  color: #091830;
+  transform: scale(1.1);
+}
+
+.h2, .touch h2, .download h2, .service .textService h2, .need h2, .landing .contact h2 {
+  font-size: 40px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.breakLine, .touch span, .service .textService span, .need span, .landing .contact span {
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: #091830;
+  margin: 1rem auto;
+}
+
+.p, .touch p, .service .boxes p, .need p, .landing .contact p {
+  color: #091830;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  padding: 20px 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+}
+
+.header {
+  overflow: hidden;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+.header .logo {
+  color: #091830;
+  padding: 15px 10px;
+  text-transform: uppercase;
+  text-shadow: -5px 1px 7px #1ba4ff;
+  font-weight: bold;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  padding: 10px 10px;
+}
+ul li {
+  padding: 10px 10px;
+}
+ul li a {
+  text-decoration: none;
+  color: #091830;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all ease-in-out 0.2s;
+}
+ul li a:hover {
+  color: #1ba4ff;
+}
+
+.landing {
+  background-image: url(..//img/wave_background.png);
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+}
+.need {
+  background-color: #1ba4ff;
+  text-align: center;
+}
+.need h2 {
+  text-transform: capitalize;
+}
+.service {
+  text-align: center;
+}
+.service .textService {
+  text-align: center;
+}
+.service .textService h2 {
+  color: #1ba4ff;
+  padding-bottom: 30px;
+  text-transform: capitalize;
+}
+.service .textService span {
+  background-color: #1ba4ff;
+}
+.service .boxes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+.service .boxes i {
+  font-size: 50px;
+  color: #1ba4ff;
+  padding-bottom: 20px;
+}
+.service .boxes h3 {
+  font-size: 30px;
+  text-transform: capitalize;
+  padding-bottom: 20px;
+  color: #091830;
+}
+.images {
+  background-color: #1ba4ff;
+  width: 100%;
+  margin: auto;
+  padding: 20px 0;
+}
+.images .imageContainer {
+  width: 90%;
+  display: flex;
+  margin: auto;
+  height: 20rem;
+  gap: 1rem;
+}
+.images .imageContainer > div {
+  flex: 1;
+  border-radius: 25px 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  transition: all 0.6s cubic-bezier(0.25, 0.4, 0.45, 1.4);
+}
+.images .imageContainer > div:hover {
+  flex: 5;
+}
+
+.download {
+  text-align: center;
+  background-color: #1ba4ff;
+}
+.download h2 {
+  font-size: 25px;
+  padding: 30px;
+}
+.touch {
+  text-align: center;
+  background-color: #1ba4ff;
+}
+.touch h2 {
+  font-size: 20px;
+}
+.touch .icones {
+  display: flex;
+  justify-content: space-evenly;
+}
+.touch .icones i {
+  display: block;
+  padding: 15px 0;
+  font-size: 30px;
+}
+.touch .icones a {
+  text-decoration: none;
+  color: white;
+}
+.touch .icones h4 {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .w-f, .header .logo, ul {
+    width: 100%;
+    float: none;
+  }
+  .h2, .landing .contact h2, .need h2, .service .textService h2, .download h2, .touch h2 {
+    font-size: 25px;
+  }
+  .p, .landing .contact p, .need p, .service .boxes p, .touch p {
+    font-size: 15px;
+  }
+  .header {
+    text-align: center;
+  }
+  .header ul {
+    display: block;
+  }
+  .service .boxes {
+    display: block;
+  }
+  .images {
+    display: none;
+  }
+  .touch .icones {
+    display: block;
+  }
+  .touch .icones .icon1 {
+    padding-bottom: 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1025px) {
+  .service .boxes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 769px) and (max-width: 1025px) {
+  .touch .icones {
+    display: flex;
+  }
+}/*# sourceMappingURL=style.css.map */
